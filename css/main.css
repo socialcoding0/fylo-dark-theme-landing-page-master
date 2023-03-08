@@ -196,8 +196,7 @@ body {
               body main .footer-bg .footer .email-container .input-container label input::placeholder {
                 color: rgba(0, 0, 0, 0.5); }
             body main .footer-bg .footer .email-container .input-container label .active-input::placeholder {
-              color: #ff4242;
-              font-size: 1.3rem; }
+              color: #ff4242; }
           body main .footer-bg .footer .email-container .input-container button {
             width: 30% !important;
             pointer-events: auto !important; }
