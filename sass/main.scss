@@ -1,0 +1,494 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap");
+// ## Colors
+
+// ### Primary
+
+// (intro and email sign up background)
+$Dark-Blue-email: #1c2230;
+// (main background)
+$Dark-Blue-bg: #1c2230;
+// (footer background)
+$Dark-Blue-footer: #0b1523;
+// (testimonials background)
+$Dark-Blue-testimonials: #21293c;
+
+// ### Accent
+// (inside call-to-action gradient)
+$Cyan: #65e2d9;
+// (inside call-to-action gradient)
+$Blue: #339ecc;
+// (error)
+$Light-Red: #ff4242;
+
+// ### Neutral
+
+$White: #ffffff;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  //   font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  background: $Dark-Blue-bg;
+  background-image: url("../images/bg-curvy-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: 1550px;
+  background-position: top 750px right 0px;
+  color: $White;
+  min-width: 300px;
+
+  h1,
+  h2 {
+    font-family: "Raleway", sans-serif;
+  }
+  p {
+    color: rgba(255, 255, 255, 0.8);
+  }
+  button {
+    outline: none;
+    border: none;
+    background-color: $Blue;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 270px;
+    padding: 1rem;
+    color: $White;
+    font-weight: 700;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $Cyan;
+    }
+  }
+
+  i {
+    cursor: pointer;
+  }
+
+  main {
+    header,
+    .base-container,
+    .small-containers,
+    .stay-container,
+    .testimonials-container {
+      display: flex;
+    }
+
+    header {
+      align-items: center;
+      justify-content: space-between;
+      //   background-color: red;
+      padding: 3rem 0rem;
+      width: 80%;
+      margin: auto;
+      img {
+        width: 130px;
+      }
+
+      .menu {
+        a {
+          margin-left: 3rem;
+          text-decoration: none;
+          color: rgba(255, 255, 255, 0.8);
+
+          &:hover {
+            color: $White;
+          }
+        }
+      }
+    }
+
+    .base-container {
+      flex-direction: column;
+      width: 50%;
+      //   background-color: red;
+      margin: auto;
+      text-align: center;
+      gap: 2rem;
+      align-items: center;
+      margin-top: 1rem;
+      img {
+        width: 100%;
+        max-width: 720px;
+        object-fit: cover;
+      }
+      h1 {
+        font-size: 2.5rem;
+      }
+      p {
+        font-size: 1.2rem;
+        width: 82%;
+        // background-color: yellow;
+      }
+    }
+
+    .middle-bg {
+      margin-top: 13.8rem;
+      padding-bottom: 14rem;
+      background-color: #181e2a;
+      .small-containers {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 5rem 0rem;
+        width: 80%;
+        margin: auto;
+        padding-bottom: 10rem;
+
+        .small-container {
+          width: 50%;
+          gap: 0.5rem;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-between;
+
+          text-align: center;
+          img {
+            width: 70px;
+            object-fit: contain;
+            height: 70px;
+          }
+          p {
+            width: 62.7%;
+            line-height: 1.3rem;
+            //   background-color: #1c2230;
+          }
+        }
+
+        .small-container:nth-child(2) img {
+          width: 60px;
+        }
+        .small-container:nth-child(1) p {
+          width: 58%;
+        }
+      }
+
+      .stay-container {
+        width: 80%;
+        margin: auto;
+        // background-color: red;
+        align-items: center;
+        gap: 3rem;
+
+        > img {
+          max-width: 615px;
+          min-width: 500px;
+          width: 100%;
+          object-fit: cover;
+        }
+        .stay-info {
+          display: flex;
+          flex-direction: column;
+          gap: 1.5rem;
+          margin-top: 2rem;
+          h2 {
+            font-size: 2.5rem;
+            width: 70%;
+          }
+          p {
+            width: 87%;
+          }
+          a {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+            color: $Cyan;
+            border-bottom: 2px solid $Cyan;
+            width: fit-content;
+            padding-bottom: 0.3rem;
+          }
+        }
+      }
+
+      .testimonials-container {
+        width: 75%;
+        gap: 2rem;
+        display: flex;
+        margin: auto;
+        margin-top: 5rem;
+        padding: 2rem 0rem;
+        background-image: url("../images/bg-quotes.png");
+        background-repeat: no-repeat;
+
+        .comment {
+          background-color: $Dark-Blue-testimonials;
+          padding: 2rem;
+          border-radius: 3px;
+          display: flex;
+          flex-direction: column;
+          gap: 1.5rem;
+          p {
+          }
+          .comment-profile {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            img {
+              border-radius: 100%;
+              width: 35px;
+            }
+            .profile-name {
+              .name {
+                display: block;
+                font-weight: 700;
+              }
+              .work {
+                font-size: 0.7rem;
+                color: rgba(255, 255, 255, 0.7);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .footer-bg {
+      background-color: $Dark-Blue-footer;
+      position: relative;
+      .footer {
+        width: 80%;
+        margin: auto;
+        padding: 13rem 0rem 5rem 0rem;
+
+        .email-container {
+          width: 55%;
+          padding: 3rem 5rem;
+          background-color: $Dark-Blue-email;
+          min-width: 780px;
+          position: absolute;
+          top: -135px;
+          left: 50%;
+          margin-left: -390px;
+          gap: 1rem;
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+          h2 {
+            font-size: 2rem;
+          }
+          p {
+          }
+          .input-container {
+            display: flex;
+            gap: 2rem;
+
+            label {
+              width: 80%;
+              input {
+                padding: 0.5rem 1rem;
+                border-radius: 20px;
+                outline: none;
+                border: 0;
+                width: 100%;
+                height: 100%;
+                &::placeholder {
+                  color: rgba(0, 0, 0, 0.5);
+                }
+              }
+              .active-input {
+                &::placeholder {
+                  color: $Light-Red;
+                  font-size: 1.3rem;
+                }
+              }
+            }
+            button {
+              width: 30% !important;
+              pointer-events: auto !important;
+            }
+
+            .active-btn {
+              pointer-events: none;
+            }
+          }
+        }
+
+        .footer-container {
+          img {
+          }
+
+          .footer-list {
+            display: flex;
+            gap: 4rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            .location {
+              width: 28%;
+              display: flex;
+              gap: 1rem;
+
+              align-items: flex-start;
+            }
+            .email-phone {
+              display: flex;
+              flex-direction: column;
+              gap: 1rem;
+              margin-right: 3rem;
+              .email,
+              .phone {
+                display: flex;
+                gap: 1rem;
+              }
+            }
+            .nav-1 {
+              display: flex;
+              flex-direction: column;
+              margin-left: auto;
+
+              gap: 1rem;
+
+              a {
+                text-decoration: none;
+                color: rgba(255, 255, 255, 0.7);
+
+                &:hover {
+                  color: $White;
+                }
+              }
+              // background-color: yellow;
+            }
+
+            .social {
+              display: flex;
+              gap: 1rem;
+              margin-left: 3rem;
+              i {
+                width: 20px;
+                height: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 1px solid $White;
+                padding: 1rem;
+                border-radius: 100%;
+                &:hover {
+                  border: 1px solid $Cyan;
+                  color: $Cyan;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  body {
+    main {
+      header {
+        width: 90%;
+        justify-content: flex-start;
+        .menu {
+          margin-left: auto;
+          a {
+            margin-left: 1rem;
+          }
+        }
+        img {
+          object-fit: cover;
+
+          max-width: 80px;
+          width: 100%;
+        }
+      }
+      .base-container {
+        width: 90%;
+      }
+      .middle-bg {
+        .small-containers {
+          width: 90%;
+          flex-direction: column;
+          align-items: center;
+          .small-container {
+            width: 100%;
+            p {
+              width: 100% !important;
+              line-height: 2.2rem;
+            }
+          }
+        }
+        .stay-container {
+          width: 90%;
+          flex-direction: column;
+          text-align: center;
+          .stay-info {
+            h2,
+            p {
+              width: 100%;
+            }
+          }
+          img {
+            min-width: 0;
+          }
+        }
+        .testimonials-container {
+          width: 90%;
+          flex-direction: column;
+        }
+      }
+
+      .footer-bg {
+        .footer {
+          width: 90%;
+          .email-container {
+            width: 100%;
+            min-width: 0;
+            right: 0px;
+            left: 0px;
+            margin-left: 0;
+            padding: 3rem 2rem;
+
+            .input-container {
+              flex-direction: column;
+              align-items: center;
+              button {
+                min-width: 170px;
+              }
+            }
+          }
+          .footer-container {
+            text-align: center;
+            padding-top: 5rem;
+            .footer-list {
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+
+              .location {
+                width: 100%;
+              }
+              .nav-1 {
+                margin-left: 0px;
+              }
+              .email-phone {
+                margin-right: 0;
+              }
+              .social {
+                margin-left: 0;
+                i {
+                  padding: 1.5rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  html {
+    font-size: 10px;
+  }
+}
